@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#030303" />
+    <meta name="description" content="GrantGlide ScholarQuest — a clearer way to find, prepare, and track scholarships." />
+    <title>GrantGlide — ScholarQuest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="canvas" aria-hidden="true"></canvas>
+    <div class="ambient-glow glow-one" aria-hidden="true"></div>
+    <div class="ambient-glow glow-two" aria-hidden="true"></div>
+
+    <div class="app-frame">
+      <header class="glass-nav">
+        <button class="brand" type="button" data-tab="dashboard" aria-label="Open ScholarQuest overview">
+          <span class="brand-icon"><i></i><i></i><i></i></span>
+          <span><strong>GrantGlide</strong><small>ScholarQuest</small></span>
+        </button>
+        <nav class="tab-nav" aria-label="ScholarQuest sections">
+          <button class="tab-link active" type="button" data-tab="dashboard">Overview</button>
+          <button class="tab-link" type="button" data-tab="profile">Profile</button>
+          <button class="tab-link" type="button" data-tab="matches">Matches <span class="nav-count">06</span></button>
+          <button class="tab-link" type="button" data-tab="documents">Documents</button>
+          <button class="tab-link" type="button" data-tab="tracker">Tracker</button>
+          <button class="tab-link" type="button" data-tab="tools">Tools</button>
+        </nav>
+        <div class="nav-actions">
+          <button class="language-button" type="button" data-toast="Language support is ready for the next step."><span class="lang-dot"></span>EN <span class="caret">⌄</span></button>
+          <button class="nav-cta" type="button" data-tab="profile">Build my match <span>↗</span></button>
+          <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
+        </div>
+        <div class="mobile-menu">
+          <button type="button" data-tab="dashboard">Overview</button>
+          <button type="button" data-tab="profile">Your profile</button>
+          <button type="button" data-tab="matches">Scholarship matches</button>
+          <button type="button" data-tab="documents">Documents</button>
+          <button type="button" data-tab="tracker">Application tracker</button>
+          <button type="button" data-tab="tools">Support tools</button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="tab-panel active" id="panel-dashboard" data-panel="dashboard">
+          <div class="hero-panel">
+            <div class="hero-copy">
+              <div class="status-badge"><span class="new-tag">LIVE</span><span>Scholarship match engine is ready</span><b>→</b></div>
+              <p class="eyebrow"><span></span> A clearer path to college funding</p>
+              <h1>Find the grants<br /><span>that fit your story.</span></h1>
+              <p class="hero-description">Turn scattered rules, documents, and deadlines into your next three best moves.</p>
+              <div class="hero-actions"><button class="gradient-button" type="button" data-tab="profile">Build my match <span>↗</span></button><button class="glass-button" type="button" data-tab="matches">Explore matches <span>→</span></button></div>
+              <div class="proof-row"><div class="avatar-stack"><span>SR</span><span>AM</span><span>PK</span><b>+2.8k</b></div><p>students making their<br /><strong>next move</strong> this month</p></div>
+            </div>
+            <div class="hero-visual">
+              <div class="floating-status"><span class="live-dot"></span><strong>Live match</strong><small>Updated just now</small></div>
+              <div class="glass-preview">
+                <div class="preview-top"><span>YOUR SCHOLARQUEST</span><b>•••</b></div>
+                <div class="preview-heading"><div class="preview-avatar">AS</div><div><small>Your match profile</small><h2>Ananya’s next moves</h2></div></div>
+                <div class="preview-score"><div class="score-orb"><strong>96</strong><small>% match</small></div><div><strong>You’re closer than you think.</strong><p>6 grants fit your profile right now.</p></div></div>
+                <div class="preview-checks"><div><span>✓</span> Female · Engineering <b>+28</b></div><div><span>✓</span> BC · Telangana <b>+24</b></div><div><span>✓</span> GPA 8.5 · ₹1.5L income <b>+44</b></div></div>
+                <div class="preview-foot"><span class="mini-pill">PROFILE READY</span><button type="button" data-tab="matches">Open feed ↗</button></div>
+              </div>
+              <div class="deadline-float"><small>EARLIEST DEADLINE</small><strong>12 days</strong><span>to make your move</span></div>
+            </div>
+          </div>
+          <div class="overview-strip">
+            <div><span class="metric-icon purple">✦</span><strong id="match-count">06</strong><small>matched schemes</small></div>
+            <div><span class="metric-icon blue">◷</span><strong>12d</strong><small>to earliest deadline</small></div>
+            <div><span class="metric-icon pink">✓</span><strong>03/05</strong><small>documents ready</small></div>
+            <div class="overview-note"><span>Trusted by the next generation of applicants</span><div class="logo-row"><b>AICTE</b><b>NSP</b><b>ePASS</b><b>Mi</b></div></div>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="panel-profile" data-panel="profile">
+          <div class="panel-heading"><div><span class="panel-kicker">01 / PROFILE BUILDER</span><h2>Start with the details<br /><em>that matter.</em></h2><p>Six signals. One clearer shortlist. Your answers stay on this device.</p></div><div class="panel-heading-side"><span class="sparkle">✦</span><strong>96%</strong><small>current profile fit</small></div></div>
+          <div class="profile-layout">
+            <div class="profile-card glass-card">
+              <div class="card-heading"><div><span class="micro-label">THE QUICK INTAKE</span><h3>Your eligibility snapshot</h3></div><span class="step-badge">01<span>/03</span></span></div>
+              <form id="profile-form">
+                <div class="field-grid"><label class="field"><span>Category</span><select id="category"><option value="BC">BC — Backward Class</option><option value="SC">SC — Scheduled Caste</option><option value="ST">ST — Scheduled Tribe</option><option value="GEN">General</option></select></label><label class="field"><span>Gender</span><select id="gender"><option value="female">Female</option><option value="male">Male</option><option value="other">Prefer not to say</option></select></label></div>
+                <div class="field-grid"><label class="field"><span>Annual family income</span><div class="prefix-input"><b>₹</b><input id="income" type="number" value="150000" min="0" step="10000" /><small>per year</small></div></label><label class="field"><span>Current GPA</span><div class="suffix-input"><input id="gpa" type="number" value="8.5" min="0" max="10" step="0.1" /><small>/ 10</small></div></label></div>
+                <div class="field-grid"><label class="field"><span>Domicile state</span><select id="state"><option value="Telangana">Telangana</option><option value="Andhra Pradesh">Andhra Pradesh</option><option value="Karnataka">Karnataka</option><option value="Maharashtra">Maharashtra</option><option value="Tamil Nadu">Tamil Nadu</option></select></label><label class="field"><span>Degree / course</span><select id="degree"><option value="Engineering">Engineering / Technology</option><option value="Medicine">Medicine</option><option value="Arts">Arts & Humanities</option><option value="Commerce">Commerce</option></select></label></div>
+                <div class="form-actions"><p><span class="secure-dot"></span> Private by default</p><button class="gradient-button" type="submit">Show my matches <span>↗</span></button></div>
+              </form>
+            </div>
+            <aside class="profile-aside"><div class="side-stat glass-card"><span class="side-stat-icon">◎</span><strong>30+</strong><p>schemes indexed</p></div><div class="side-stat glass-card"><span class="side-stat-icon blue-icon">✳</span><strong>06</strong><p>rules checked at once</p></div><div class="side-quote glass-card"><span>“</span><p>Built for the student who has ten tabs open and one deadline left.</p><small>— The ScholarQuest brief</small></div></aside>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="panel-matches" data-panel="matches">
+          <div class="panel-heading matches-heading"><div><span class="panel-kicker">02 / MATCH FEED</span><h2>The right grants,<br /><em>not a larger list.</em></h2><p>Based on your current profile, six schemes are worth a closer look.</p></div><div class="match-engine"><span class="engine-dot"></span><small>MATCH ENGINE</small><strong>ON</strong></div></div>
+          <div class="filter-row"><button class="filter-pill active" data-filter="all">All matches <span>06</span></button><button class="filter-pill" data-filter="government">Government <span>03</span></button><button class="filter-pill" data-filter="merit">Merit-based <span>02</span></button><button class="filter-pill" data-filter="women">Women in STEM <span>02</span></button><button class="filter-pill" data-filter="need">Need-based <span>03</span></button></div>
+          <div class="scholarship-grid" id="scholarship-grid"></div>
+          <div class="feed-footer"><span>Match scores update when you change your profile.</span><button class="ghost-link" type="button" data-tab="documents">Inspect a scheme <span>→</span></button></div>
+        </section>
+
+        <section class="tab-panel" id="panel-documents" data-panel="documents">
+          <div class="panel-heading"><div><span class="panel-kicker">03 / DOCUMENTS</span><h2>Make the fine print<br /><em>feel findable.</em></h2><p>Open a scheme, see why it matched, and get your paperwork ready.</p></div><span class="no-guesswork">NO GUESSWORK</span></div>
+          <div class="inspector-layout"><article class="scheme-detail glass-card" id="scheme-detail"></article><aside class="readiness-card glass-card"><div class="card-heading"><div><span class="micro-label">DOCUMENT READINESS</span><h3>Ready when you are</h3></div><span class="readiness-count" id="readiness-count">3/5</span></div><div class="readiness-meter"><span id="readiness-meter-fill"></span></div><p class="readiness-copy" id="readiness-copy">Three core documents are in shape. One renewal needs a nudge.</p><div class="document-list" id="document-list"></div><div class="expiry-alert"><span>!</span><p><strong>Expiry watch</strong><br />Income certificate renews in 24 days.</p><button type="button" data-toast="Renewal reminder saved. We’ll keep this visible.">Remind me</button></div></aside></div>
+        </section>
+
+        <section class="tab-panel" id="panel-tracker" data-panel="tracker">
+          <div class="panel-heading"><div><span class="panel-kicker">04 / APPLICATION TRACKER</span><h2>Your scholarship<br /><em>workbench.</em></h2><p>Save the promising ones. Move the active ones forward.</p></div><div class="tracker-total"><strong>04</strong><span>active threads</span></div></div>
+          <div class="kanban-board"><div class="lane"><div class="lane-head"><span>01</span><h3>Bookmarked</h3><b id="bookmark-count">02</b></div><div class="lane-card"><div class="lane-card-top"><span class="lane-logo marigold-logo">P</span><span class="mini-pill">12 DAYS</span></div><h4>Pragati Scholarship</h4><p>AICTE · Women in STEM</p><button class="lane-action" data-toast="Pragati Scholarship moved to Applied.">Move to applied <span>→</span></button></div><div class="lane-card muted-lane-card"><div class="lane-card-top"><span class="lane-logo purple-logo">R</span><span class="mini-pill">28 DAYS</span></div><h4>Reliance Foundation</h4><p>Merit · Need-based</p></div></div><div class="lane"><div class="lane-head"><span>02</span><h3>Applied</h3><b>01</b></div><div class="lane-card"><div class="lane-card-top"><span class="lane-logo coral-logo">N</span><span class="mini-pill green-pill">SENT</span></div><h4>NSP Post-Matric</h4><p>Government · BC students</p><div class="lane-progress"><span></span></div><small>Application sent 4 days ago</small></div><div class="lane-empty">Drag a saved scheme here<br /><span>to keep your momentum</span></div></div><div class="lane"><div class="lane-head"><span>03</span><h3>Under review</h3><b>01</b></div><div class="lane-card"><div class="lane-card-top"><span class="lane-logo ink-logo">T</span><span class="mini-pill">IN REVIEW</span></div><h4>Telangana ePASS</h4><p>State support · Domicile fit</p><div class="review-pulse"><i></i><span>Last checked today</span></div></div></div><div class="lane"><div class="lane-head"><span>04</span><h3>Awarded</h3><b>00</b></div><div class="lane-empty award-empty"><span class="empty-star">✦</span><strong>Your next win<br />can land here.</strong><button class="ghost-link" type="button" data-toast="We’ll celebrate this one with you.">Keep going <span>↗</span></button></div></div></div>
+        </section>
+
+        <section class="tab-panel" id="panel-tools" data-panel="tools">
+          <div class="panel-heading"><div><span class="panel-kicker">05 / SUPPORT TOOLS</span><h2>Small tools for<br /><em>big admin days.</em></h2><p>Get a little more lift when the forms and deadlines pile up.</p></div><span class="tool-mark">✦</span></div>
+          <div class="tools-grid"><article class="tool-card glass-card"><div class="tool-top"><span class="tool-icon calculator-icon">₹</span><span class="mini-pill">ESTIMATOR</span></div><h3>What’s the gap?</h3><p>See how a smart scholarship mix could soften your tuition deficit.</p><div class="calculator-fields"><label><span>Annual tuition</span><div class="prefix-input"><b>₹</b><input id="tuition" type="number" value="180000" /></div></label><label><span>Family contribution</span><div class="prefix-input"><b>₹</b><input id="contribution" type="number" value="60000" /></div></label></div><div class="calculator-result"><span>Estimated gap</span><strong id="gap-result">₹1,20,000</strong><small>Potentially covered by 2 matched schemes</small></div></article><article class="tool-card dark-tool"><div class="tool-top"><span class="tool-icon whatsapp-icon">↗</span><span class="mini-pill pink-pill">SIMULATOR</span></div><h3>Never miss the nudge.</h3><p>Preview a WhatsApp-style reminder for your earliest deadline.</p><div class="phone-message"><div class="message-head"><span class="message-avatar">GG</span><span><strong>GrantGlide</strong><small>today, 9:41 AM</small></span></div><div class="message-bubble">Hey Ananya — <strong>Pragati Scholarship</strong> closes in 12 days. Your documents are 3/5 ready. You’ve got this.</div></div><button class="gradient-button full-button" id="send-alert" type="button">Send a test nudge <span>↗</span></button></article><article class="tool-card glass-card"><div class="tool-top"><span class="tool-icon language-icon">文</span><span class="mini-pill">FOR FAMILIES</span></div><h3>Make it make sense.</h3><p>Switch scheme summaries to a language your whole family can use.</p><div class="language-options"><button class="language-option active" type="button" data-toast="English summaries are active."><span>EN</span> English</button><button class="language-option" type="button" data-toast="Hindi summaries queued for the next view."><span>हि</span> हिन्दी</button><button class="language-option" type="button" data-toast="Telugu summaries queued for the next view."><span>తె</span> తెలుగు</button></div><div class="language-footnote"><span>✦</span> Clearer for you. Easier to share at home.</div></article></div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"><span>✦</span><p>Saved</p></div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
